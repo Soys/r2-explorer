@@ -5,6 +5,6 @@ export default R2Explorer({
 	readonly: true,
 	 basicAuth: {
 	   username: 'molishark',
-	   password: 'Weare.520'
+	   password: 'weare.520'
 	 }
 });
