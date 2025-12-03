@@ -7,6 +7,8 @@ const R2EXPLORER_BUCKETS = process.env.R2EXPLORER_BUCKETS;
 const R2EXPLORER_CONFIG = process.env.R2EXPLORER_CONFIG;
 const R2EXPLORER_DOMAIN = process.env.R2EXPLORER_DOMAIN;
 const CF_API_TOKEN = process.env.CF_API_TOKEN;
+const BASIC_USERNAME = process.env.BASIC_USERNAME;
+const BASIC_PASSWORD = process.env.BASIC_PASSWORD;
 
 let baseDir = __dirname;
 if (WORKERS_CI === "1") {
