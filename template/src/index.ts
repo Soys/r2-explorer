@@ -6,5 +6,5 @@ export default R2Explorer({
 	basicAuth: {
 	  username: 'molishark',
 	  password: 'Weare.520'
-	// }
+ }
 });
