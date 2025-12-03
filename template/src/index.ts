@@ -4,8 +4,7 @@ import { R2Explorer } from "r2-explorer";
 export default R2Explorer({
 	readonly: true,
 	// basicAuth: {
-	//   username: 'molishark',
-	//   password: 'weare.520'
+	//   username: 'username',
+	//   password: 'password'
 	// }
 });
-
