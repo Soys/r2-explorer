@@ -1,3 +1,11 @@
-import { R2Explorer } from 'r2-explorer';
+import { R2Explorer } from "r2-explorer";
 
-export default R2Explorer({ readonly: false, cfAccessTeamName: 'molishark' });
+// Read all available configurations here: https://r2explorer.com/getting-started/configuration/
+export default R2Explorer({
+	readonly: true,
+  cfAccessTeamName: 'molishark'
+	// basicAuth: {
+	//   username: 'username',
+	//   password: 'password'
+	// }
+});
