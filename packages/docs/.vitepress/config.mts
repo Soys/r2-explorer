@@ -3,10 +3,10 @@ import {defineConfig} from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   sitemap: {
-    hostname: 'https://r2explorer.com'
+    hostname: 'https://r2-docs.101011.best'
   },
   title: 'R2 Explorer',
-  description: 'A Google Drive Interface for your Cloudflare R2 Buckets',
+  description: '为你的Cloudflare R2存储桶打造的Google Drive风格管理界面',
   head: [['link', { rel: 'icon', href: '/assets/logo.svg' }]],
   cleanUrls: true,
   themeConfig: {
@@ -14,31 +14,31 @@ export default defineConfig({
     logo: '/assets/logo.svg', // Assuming assets will be in public/assets
     outline: [2, 3],
         nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Getting Started', link: '/getting-started/creating-a-new-project' },
-      { text: 'Guides', items: [
-        { text: 'Email Explorer', link: '/guides/setup-email-explorer/' },
-        { text: 'Sharable Links', link: '/guides/sharable-links' },
+      { text: '首页', link: '/' },
+      { text: '开始使用', link: '/getting-started/creating-a-new-project' },
+      { text: '指南', items: [
+        { text: '邮件浏览器', link: '/guides/setup-email-explorer/' },
+        { text: '分享链接', link: '/guides/sharable-links' },
       ]},
-      { text: 'Live Demo', link: 'https://demo.r2explorer.com/' },
+      { text: '在线演示', link: 'https://demo.r2explorer.com/' },
     ],
     sidebar:  [
         {
-          text: 'Getting Started',
+          text: '开始使用',
           items: [
-            { text: 'Creating a New Project', link: '/getting-started/creating-a-new-project' },
-            { text: 'Add R2 Buckets', link: '/getting-started/add-r2-buckets' },
-            { text: 'Configuration', link: '/getting-started/configuration' },
-            { text: 'Security', link: '/getting-started/security' },
-            { text: 'Deploying', link: '/getting-started/deploying' },
-            { text: 'Updating Your Project', link: '/getting-started/updating-your-project' }
+            { text: '创建新项目', link: '/getting-started/creating-a-new-project' },
+            { text: '添加 R2存储桶', link: '/getting-started/add-r2-buckets' },
+            { text: '配置', link: '/getting-started/configuration' },
+            { text: '安全', link: '/getting-started/security' },
+            { text: '部署', link: '/getting-started/deploying' },
+            { text: '更新你的项目', link: '/getting-started/updating-your-project' }
           ]
         },
         {
-          text: 'Guides',
+          text: '指南',
           items: [
-            { text: 'Setup Email Explorer', link: '/guides/setup-email-explorer' },
-            { text: 'Sharable Links', link: '/guides/sharable-links' },
+            { text: '配置邮件浏览器', link: '/guides/setup-email-explorer' },
+            { text: '分享链接', link: '/guides/sharable-links' },
           ]
         }
       ],
@@ -47,12 +47,12 @@ export default defineConfig({
       {icon: 'x', link: 'https://x.com/G4brym'}
     ],
     footer: {
-      message: 'Released under the MIT License.',
+      message: '遵循 MIT 许可证条款发布。',
       copyright: 'Copyright © 2023-present Gabriel Massadas'
     },
     editLink: {
       pattern: 'https://github.com/G4brym/R2-Explorer/edit/main/packages/docs/:path',
-      text: 'Edit this page on GitHub'
+      text: '在Github上编辑该页'
     }
   }
 })
