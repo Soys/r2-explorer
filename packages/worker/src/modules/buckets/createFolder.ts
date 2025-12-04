@@ -7,7 +7,7 @@ export class CreateFolder extends OpenAPIRoute {
 	schema = {
 		operationId: "post-bucket-create-folder",
 		tags: ["Buckets"],
-		summary: "Create folder",
+		summary: "创建文件夹",
 		request: {
 			params: z.object({
 				bucket: z.string(),
@@ -32,7 +32,7 @@ export class CreateFolder extends OpenAPIRoute {
 
 		if (!bucket) {
 			throw new HTTPException(500, {
-				message: `Bucket binding not found: ${bucketName}`,
+				message: `未找到绑定的存储桶： ${bucketName}`,
 			});
 		}
 		const key = decodeURIComponent(escape(atob(data.body.key)));
