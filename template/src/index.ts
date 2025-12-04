@@ -1,9 +1,22 @@
-import { R2Explorer } from 'r2-explorer';
+import { R2Explorer } from "r2-explorer";
 
-export default R2Explorer({
-  readonly: false, 
-  basicAuth: [{
-    username: 'molishark',
-    password: 'Weare.520'
-  }]
-});
+const baseConfig = {
+	readonly: false,
+	cors: true,
+	showHiddenFiles: true,
+};
+
+export default {
+	async email(event, env, context) {
+		await R2Explorer(baseConfig).email(event, env, context);
+	},
+	async fetch(request, env, context) {
+		return R2Explorer({
+			...baseConfig,
+			basicAuth: {
+				username: env.BASIC_USERNAME,
+				password: env.BASIC_PASSWORD,
+			},
+		}).fetch(request, env, context);
+	},
+};
