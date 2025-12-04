@@ -5,7 +5,7 @@
       <q-card-section class="bg-grey-2 text-black" vertical>
           <q-btn-group unelevated>
             <q-btn push icon="arrow_back" :to="{ name: `email-folder`, params: { bucket: $route.params.bucket, folder: $route.params.folder }}">
-              <q-tooltip>Back</q-tooltip>
+              <q-tooltip>返回</q-tooltip>
             </q-btn>
 <!--            <q-btn push icon="chevron_left">-->
 <!--              <q-tooltip>More recent</q-tooltip>-->
@@ -15,10 +15,10 @@
 <!--            </q-btn>-->
             <template v-if="fileHead">
               <q-btn push icon="mark_email_unread" @click="markAsUnread" v-if="fileHead.customMetadata.read === 'true'">
-                <q-tooltip>Mark email as unread</q-tooltip>
+                <q-tooltip>标记为未读</q-tooltip>
               </q-btn>
               <q-btn push icon="mark_email_read" @click="markAsRead" v-else>
-                <q-tooltip>Mark email as read</q-tooltip>
+                <q-tooltip>标记为已读</q-tooltip>
               </q-btn>
             </template>
           </q-btn-group>
@@ -58,7 +58,7 @@
 
       <q-card-actions vertical v-if="attachments.length > 0">
         <q-separator/>
-        <h6 class="q-my-md">Attachments</h6>
+        <h6 class="q-my-md">附件</h6>
 
         <div class="row attachments">
             <div v-for="attachment of file.attachments" class="col-md-4 col-sm-12" :key="attachment.filename">
