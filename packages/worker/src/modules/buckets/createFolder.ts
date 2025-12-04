@@ -7,7 +7,7 @@ export class CreateFolder extends OpenAPIRoute {
 	schema = {
 		operationId: "post-bucket-create-folder",
 		tags: ["Buckets"],
-		summary: "创建文件夹",
+		summary: "Create folder",
 		request: {
 			params: z.object({
 				bucket: z.string(),
