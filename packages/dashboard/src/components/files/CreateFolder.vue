@@ -5,7 +5,7 @@
         @submit="onSubmit"
       >
         <q-card-section>
-          <div class="text-h6">New Folder Name</div>
+          <div class="text-h6">新文件夹名</div>
         </q-card-section>
 
         <q-card-section class="q-pt-none">
