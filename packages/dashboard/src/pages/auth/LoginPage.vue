@@ -2,8 +2,8 @@
   <q-page class='flex flex-center'>
     <q-card class='q-pa-md shadow-2' bordered>
       <q-card-section class='text-center'>
-        <div class='text-grey-9 text-h5 text-weight-bold'>Sign in</div>
-        <div class='text-grey-8'>Enter your email address and password to access admin panel.</div>
+        <div class='text-grey-9 text-h5 text-weight-bold'>登录</div>
+        <div class='text-grey-8'>输入你的电子邮件地址和密码访问管理面板。</div>
       </q-card-section>
 
       <q-card-section v-if='showError'>
