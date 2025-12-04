@@ -9,7 +9,7 @@
               <q-item-section>
                 <q-item-label>
                   <q-icon name="note_add" size="sm" />
-                  New File
+                  新文件
                 </q-item-label>
               </q-item-section>
             </q-item>
@@ -17,7 +17,7 @@
               <q-item-section>
                 <q-item-label>
                   <q-icon name="create_new_folder" size="sm" />
-                  New Folder
+                  新文件夹
                 </q-item-label>
               </q-item-section>
             </q-item>
@@ -26,7 +26,7 @@
               <q-item-section>
                 <q-item-label>
                   <q-icon name="upload_file" size="sm" />
-                  Upload Files
+                  上传文件
                 </q-item-label>
               </q-item-section>
             </q-item>
@@ -35,7 +35,7 @@
               <q-item-section>
                 <q-item-label>
                   <q-icon name="folder" size="sm" />
-                  Upload Folders
+                  上传文件夹
                 </q-item-label>
               </q-item-section>
             </q-item>
@@ -43,11 +43,11 @@
         </q-menu>
       </q-btn>
 
-      <q-btn class="q-mb-sm" @click="gotoFiles" color="blue" icon="folder_copy" label="Files" stack />
-      <q-btn v-if="mainStore.config && mainStore.config.emailRouting !== false" class="q-mb-sm" @click="gotoEmail" color="blue" icon="email" label="Email" stack />
+      <q-btn class="q-mb-sm" @click="gotoFiles" color="blue" icon="folder_copy" label="文件" stack />
+      <q-btn v-if="mainStore.config && mainStore.config.emailRouting !== false" class="q-mb-sm" @click="gotoEmail" color="blue" icon="email" label="邮件" stack />
 
       <q-btn class="q-mb-sm q-mt-auto q-mb-0" @click="infoPopup=true" color="secondary" icon="question_mark"
-             label="Info"
+             label="信息"
              stack />
     </div>
   </div>
@@ -55,30 +55,30 @@
   <q-dialog v-model="infoPopup" persistent no-route-dismiss>
     <q-card>
       <q-card-section>
-        <div class="text-h6">🎉 Thank you for using R2-Explorer! 🚀</div>
+        <div class="text-h6">🎉 感谢您使用 R2-Explorer! 🚀</div>
       </q-card-section>
 
       <q-card-section class="q-pt-none">
-        You are running version <b>{{ mainStore.version }}</b><br>
+        你正在运行版本 <b>{{ mainStore.version }}</b><br>
         <template v-if="updateAvailable">
-          Latest version is <b>{{latestVersion}}</b>, learn how to <a href="https://r2explorer.com/getting-started/updating-your-project/" target="_blank">update your instance here</a>.<br>
+          最新版本是 <b>{{latestVersion}}</b>，了解如何<a href="https://r2explorer.com/getting-started/updating-your-project/" target="_blank">升级你的实例</a>。<br>
         </template>
         <br>
         <template v-if="mainStore.auth">
-          <b>Authentication</b><br>
-          Method: {{ mainStore.auth.type }}<br>
-          Username: {{ mainStore.auth.username }}
+          <b>认证</b><br>
+          方法： {{ mainStore.auth.type }}<br>
+          用户名： {{ mainStore.auth.username }}
         </template>
         <template v-else>
-          Not authenticated
+          未认证
         </template>
         <br><br>
-        <b>Server Configuration</b><br>
+        <b>服务配置</b><br>
         {{ JSON.stringify(mainStore.config, null, 2) }}
       </q-card-section>
 
       <q-card-actions align="right">
-        <q-btn flat label="OK" color="primary" v-close-popup />
+        <q-btn flat label="好的" color="primary" v-close-popup />
       </q-card-actions>
     </q-card>
   </q-dialog>
@@ -146,9 +146,9 @@ export default defineComponent({
 			"https://api.github.com/repos/G4brym/R2-Explorer/releases/latest",
 		);
 		if (!resp.ok) {
-			console.log("Unable to retrieve latest r2-explorer updates :(");
+			console.log("无法获取r2-explorer 最新更新 ：(");
 			console.log(
-				"Manually check them here: https://github.com/G4brym/R2-Explorer/releases",
+				"从这里手动获取： https://github.com/G4brym/R2-Explorer/releases",
 			);
 		} else {
 			const parsed = await resp.json();
