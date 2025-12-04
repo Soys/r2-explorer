@@ -1,33 +1,33 @@
 <template>
   <q-list style="min-width: 100px">
     <q-item clickable v-close-popup @click="openObject">
-      <q-item-section>Open</q-item-section>
+      <q-item-section>打开</q-item-section>
     </q-item>
     <q-item clickable v-close-popup @click="downloadObject" v-if="prop.row.type === 'file'">
-      <q-item-section>Download</q-item-section>
+      <q-item-section>下载</q-item-section>
     </q-item>
     <q-item clickable v-close-popup @click="renameObject" v-if="prop.row.type === 'file'">
-      <q-item-section>Rename</q-item-section>
+      <q-item-section>重命名</q-item-section>
     </q-item>
     <q-item clickable v-close-popup @click="updateMetadataObject" v-if="prop.row.type === 'file'">
-      <q-item-section>Update Metadata</q-item-section>
+      <q-item-section>更新元数据</q-item-section>
     </q-item>
     <q-separator />
     <q-item clickable v-close-popup @click="createShareLink" v-if="prop.row.type === 'file'">
       <q-item-section>
-        <q-item-label>Create Share Link</q-item-label>
-        <q-item-label caption>Public link with optional password</q-item-label>
+        <q-item-label>创建分享链接</q-item-label>
+        <q-item-label caption>支持设置访问密码</q-item-label>
       </q-item-section>
     </q-item>
     <q-item clickable v-close-popup @click="copyInternalLink">
       <q-item-section>
-        <q-item-label>Copy Internal Link</q-item-label>
-        <q-item-label caption>Link to view in dashboard</q-item-label>
+        <q-item-label>复制内部链接</q-item-label>
+        <q-item-label caption>在仪表板中查阅</q-item-label>
       </q-item-section>
     </q-item>
     <q-separator />
     <q-item clickable v-close-popup @click="deleteObject">
-      <q-item-section>Delete</q-item-section>
+      <q-item-section>删除</q-item-section>
     </q-item>
   </q-list>
 </template>
@@ -101,7 +101,7 @@ export default {
 			try {
 				await navigator.clipboard.writeText(url);
 				this.q.notify({
-					message: "Link to file copied to clipboard!",
+					message: "文件链接已复制到剪贴板！",
 					timeout: 5000,
 					type: "positive",
 				});
