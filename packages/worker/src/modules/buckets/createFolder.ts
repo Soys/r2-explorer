@@ -32,7 +32,7 @@ export class CreateFolder extends OpenAPIRoute {
 
 		if (!bucket) {
 			throw new HTTPException(500, {
-				message: `未找到绑定的存储桶： ${bucketName}`,
+				message: `Bucket binding not found: ${bucketName}`,
 			});
 		}
 		const key = decodeURIComponent(escape(atob(data.body.key)));
