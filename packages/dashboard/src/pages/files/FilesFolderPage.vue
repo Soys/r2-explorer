@@ -13,7 +13,7 @@
           label="Manage Shares"
           @click="$refs.shareFile.openManageShares()"
         >
-          <q-tooltip>View and manage all share links</q-tooltip>
+          <q-tooltip>查看和管理所有分享链接</q-tooltip>
         </q-btn>
       </div>
 
@@ -47,7 +47,7 @@
 
           <template v-slot:no-data>
             <div class="full-width q-my-lg" v-if="!loading">
-              <h6 class="flex items-center justify-center"><q-icon name="folder" color="orange" size="lg" />This folder is empty</h6>
+              <h6 class="flex items-center justify-center"><q-icon name="folder" color="orange" size="lg" />文件夹为空</h6>
             </div>
           </template>
 
@@ -83,11 +83,11 @@
 
         <div v-if="loadingMore" class="q-pa-md text-center">
           <q-spinner color="primary" size="md" />
-          <div class="q-mt-sm text-grey">Loading more files...</div>
+          <div class="q-mt-sm text-grey">加载更多文件...</div>
         </div>
 
         <div v-if="!hasMore && rows.length > 0 && !loading" class="q-pa-md text-center text-grey">
-          No more files to load
+          没有更多文件
         </div>
 
       </drag-and-drop>
