@@ -6,7 +6,7 @@
       </div>
 
       <div class="text-h2" style="opacity:.4">
-        Oops. Nothing here...
+        啊哦，啥也没有...
       </div>
 
       <q-btn
